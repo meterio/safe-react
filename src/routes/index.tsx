@@ -18,6 +18,8 @@ const Safe = React.lazy(() => import('./safe/container'))
 
 const Load = React.lazy(() => import('./load/container/Load'))
 
+const RecoverSafes = React.lazy(() => import('./recover/RecoverSafes'))
+
 const SAFE_ADDRESS = `${SAFELIST_ADDRESS}/:${SAFE_PARAM_ADDRESS}`
 
 const Routes = (): React.ReactElement => {
@@ -79,6 +81,7 @@ const Routes = (): React.ReactElement => {
       <Route component={Open} exact path={OPEN_ADDRESS} />
       <Route component={Safe} path={SAFE_ADDRESS} />
       <Route component={Load} exact path={LOAD_ADDRESS} />
+      <Route component={RecoverSafes} exact path="/recover-safes" />
       <Redirect to="/" />
     </Switch>
   )
